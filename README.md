@@ -15,18 +15,18 @@ $ cd docker-awscli
 $ docker build -t awscli .
 ```
 
-## Run
+## Run (will pull from dockerhub)
 
 ```
-docker run -it awscli aws help
-docker run -it awscli curl https://www.google.com
+$ docker run -it countingup/awscli aws help
+$ docker run -it countingup/awscli curl https://www.google.com
 ```
 Shell scripts can be used to make these commands easily available from the host machine e.g.
 ```
-echo 'docker run --rm countingup/awscli curl "$@"' > /usr/bin/curl && chmod +x /usr/bin/curl
-echo 'docker run --rm countingup/awscli aws "$@"' > /usr/bin/aws && chmod +x /usr/bin/aws
+$ echo 'docker run --rm countingup/awscli curl "$@"' > /usr/bin/curl && chmod +x /usr/bin/curl
+$ echo 'docker run --rm countingup/awscli aws "$@"' > /usr/bin/aws && chmod +x /usr/bin/aws
 ```
 S3 file operations may require bind mounting a host path as a volume in the container e.g.
 ```
-echo 'docker run --rm -v /tmp:/tmp countingup/awscli aws "$@"' > /usr/bin/aws && chmod +x /usr/bin/aws
+$ echo 'docker run --rm -v /tmp:/tmp countingup/awscli aws "$@"' > /usr/bin/aws && chmod +x /usr/bin/aws
 ```

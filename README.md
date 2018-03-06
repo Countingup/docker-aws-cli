@@ -1,18 +1,18 @@
 # awscli
 
-[![Docker Automated buil](https://img.shields.io/docker/build/countingup/awscli.svg)](https://hub.docker.com/r/countingup/awscli/builds/)
+[![Docker Automated build](https://img.shields.io/docker/build/countingup/awscli.svg)](https://hub.docker.com/r/countingup/awscli/builds/)
 
 Utility container built on Alpine 3.6 for interaction with AWS services.
 
-Includes recent AWS client tools (awscli version~=1.11), to interact with the AWS platform via
-command line, and curl with SSL support (so openssl plus ca-certificates) to allow scripting HTTP/S
-calls (e.g. to query metadata).
+Includes recent AWS client tools (awscli version~=1.14), to interact with the AWS platform via
+command line, AWS CloudFormation helper scripts, and curl with SSL support (so openssl plus
+ ca-certificates) to allow scripting HTTP/HTTPS calls (e.g. to query metadata).
 
 ## Build locally
 
 ```
 $ cd docker-awscli
-$ docker build -t awscli .
+$ docker build -t countingup/awscli .
 ```
 
 ## Run (will pull from dockerhub)

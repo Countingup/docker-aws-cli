@@ -1,6 +1,6 @@
 # awscli
 
-[![Docker Automated build](https://img.shields.io/docker/build/countingup/awscli.svg)](https://hub.docker.com/r/countingup/awscli/builds/)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/countingup/awscli.svg)](https://hub.docker.com/r/countingup/awscli/builds/) ![Docker Image Size](https://img.shields.io/docker/image-size/countingup/awscli/latest)
 
 Utility container built on Alpine 3.11 for interaction with AWS services.
 
